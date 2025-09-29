@@ -1,7 +1,8 @@
 // Practice exercise one
 
     // array shopping list
-let shoppingList =["Bag", "Toothpaste", "Powder", "Lipstick", "Shoe"];
+function shoppingList() {
+    let shoppingList =["Bag", "Toothpaste", "Powder", "Lipstick", "Shoe"];
 console.log("Shopping list:", shoppingList);
 
     // add new item to the end of the list
@@ -25,12 +26,15 @@ console.log("");
     //loop through the list and print each items with its positions
 console.log("=====Shopping list items=====");
 
-function formatList(newList) {
-    for (let i= 0; i < shoppingList.length; i++) {
-        console.log(`${i + 1}. ${shoppingList[i]}`);
+    function formatList(newList) {
+        for (let i= 0; i < shoppingList.length; i++) {
+            console.log(`${i + 1}. ${shoppingList[i]}`);
+        }
     }
+    formatList()
+
 }
-formatList()
+
 
 
 // Practice exercise two
