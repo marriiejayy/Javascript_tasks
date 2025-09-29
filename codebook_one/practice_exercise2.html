@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced basic calculator</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        .calculator-container {
+            margin: 10px;
+            padding: 10px;
+            background-color: azure;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 28px;
+        }
+
+        .calc-logo {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        .calc {
+            background-color: white;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+       
+
+    </style>
+</head>
+<body>
+    <div class="calculator-container">
+        <div class="calc-logo">
+            <h3><strong>Basic Calculator</strong></h3>
+            <button style=" background-color: white; font-size: 26px;"><strong>CALCULATOR</strong></button>
+            <button class="calc" onclick="showBasicArithmetics()">Arithmetic operations</button>
+       
+            <div id="calculator-output" class="output"> <span style="font-style: italic; background-color: rgb(22, 23, 24); color: white; text-decoration: underline; font-size: 22px;">click on arithmetic operations to show the output... </span></div>
+        </div>
+    </div>
+
+    
+
+    <script>
+        console.info("This shows the output of a basic arithmetic opration");
+        console.warn("NOTE: This is a basic calculator")
+
+    function showBasicArithmetics() {
+        let num1 = 20;
+        let num2 = 15;
+
+        let addition = num1 + num2;
+        let subtraction = num1 - num2;
+        let multiplication = num1 * num2;
+        let division = num1 / num2;
+        let remainder = num1 % num2;
+        let exponentiation = num1 ** num2;
+
+        let output =`
+            num1 = ${num1}, num2 = ${num2}<br><br>
+            Addition: ${addition}<br>
+            Subtraction: ${subtraction}<br>
+            Multiplication: ${multiplication}<br>
+            Division: ${division}<br>
+            Remainder: ${remainder}<br>
+            Exponentiation:${exponentiation}<br>
+        `;
+
+    
+
+        document.getElementById('calculator-output').innerHTML = output; 
+    }
+
+    </script>
+</body>
+</html>

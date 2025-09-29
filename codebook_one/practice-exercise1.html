@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My personal Information</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .js-info {
+            background-color: azure;
+            padding: 10px;
+            margin: 15px;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 28px;
+
+        }
+
+        .demo-button {
+            background-color: white;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .demo-button:hover {
+            background-color: blue;
+            color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <div class="js-info">
+        <h3 style="margin-bottom: 20px; padding-left: 40%;">MY PERSONAL INFORMATION</h3>
+
+        
+        <button class="demo-button" onclick="createPersonalInfo()">My Information</button>
+        
+        <div id="task1-js" class="output"> <span style="font-style: italic; text-decoration: underline;"> click my information to display my personal information ...</span></div>
+    </div>
+
+    <script>
+    function createPersonalInfo() {
+        
+        const firstName = "Mariam";
+        const lastName = "Adesina";
+        const age = 22;
+        const isStudent = true;
+        const favoriteColor = "Black";
+        
+        // future age
+        const futureAge = age + 5;
+        
+        const personalInfo = `
+            <div style="border: 2px solid ${favoriteColor}; padding: 15px; border-radius: 10px; background-color: white;">
+                <h4 style="color: ${favoriteColor}; margin-top: 0;">Personal Information Card</h4>
+                <p><strong>Name:</strong> ${firstName} ${lastName}</p>
+                <p><strong>Current Age:</strong> ${age} years old</p>
+                <p><strong>Student Status:</strong> ${isStudent ? 'Yes, I am a student' : 'No, I am not a student'}</p>
+                <p><strong>Favorite Color:</strong> ${favoriteColor}</p>
+                <p><strong>In 5 years:</strong> I will be ${futureAge} years old</p>
+                <p><strong>Fun Fact:</strong> My name has ${firstName.length + lastName.length} letters total!</p>
+            </div>
+        `;
+        
+        document.getElementById('task1-js').innerHTML = personalInfo;
+    }
+
+    </script>
+</body>
+</html>
