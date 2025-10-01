@@ -60,11 +60,6 @@ function weatherAdvice(temperature, isRaining) {
 weatherAdvice(40, false) 
 
     // Task4: ATM simulator
-let balance = 5000;
-let action = "deposit";
-let amount = 2000;
-
-
 function atm(balance, action, amount) {
     if (action === "withdraw") {
         if (amount > 2500) {
@@ -85,8 +80,73 @@ function atm(balance, action, amount) {
     }
 }
 
+atm(5000, "deposit", 2000);
+
+// Practice Exercise 5- Personal Assistant Function
+
+// Personal Assistant Function
+
+function personalAssistant(time, weather, dayType) {
+  // validation
+  if (time < 0 || time > 24) {
+    return "The time is invalid! Use 0-24 hour format.";
+  }
+  
+  if (weather !== 'sunny' && weather !== 'rainy' && weather !== 'cloudy') {
+    return "Invalid weather! Make use of sunny, rainy, or cloudy.";
+  }
+  
+  if (dayType !== 'workday' && dayType !== 'weekend' && dayType !== 'holiday') {
+    return "Invalid day type! Use workday, weekend, or holiday.";
+  }
+  
+   // Checking if it's a work day 
+  let isWorkday = dayType === 'workday' ? true : false;
+  
+  // Checking if it's free time (weekend or holiday)
+  let isFreeDay = dayType === 'weekend' || dayType === 'holiday' ? true : false;
+  
+  // Morning (6-12)
+  if (time >= 6 && time < 12) {
+    if (isWorkday && weather === 'rainy') {
+      return "Good morning! It's rainy, take an umbrella to work.";
+    } else if (isWorkday && weather === 'sunny') {
+      return "Good morning! The weather is a nice day for work. Would you perhaps like to take a walk?";
+    } else if (isFreeDay && weather === 'sunny') {
+      return "Good morning! It's a sunny day. Go outside and enjoy the weather!";
+    } else {
+      return "Good morning! Do have a great day!";
+    }
+  }
+  
+  // Afternoon (12-17)
+  if (time >= 12 && time < 17) {
+    if (isWorkday) {
+      return "Good afternoon! Don't forget to take a lunch break.";
+    } else if (isFreeDay && weather === 'sunny') {
+      return "Good afternoon! This is a perfect time for outdoor activities!";
+    } else {
+      return "Good afternoon! Enjoy your free time.";
+    }
+  }
+  
+  // Evening (17-21)
+  if (time >= 17 && time < 21) {
+    if (isWorkday) {
+      return "Good evening! It's a good time to relax after work.";
+    } else if (isFreeDay) {
+      return "Good evening! Great time for dinner or hanging out!";
+    }
+  }
+  
+  // Night (21-24 or 0-6)
+  if (time >= 21 || time < 6) {
+    let message = isWorkday ? "Get some rest for tomorrow!" : "Enjoy your night!";
+    return "It's late! " + message;
+  }
+}
+
+console.log(personalAssistant(14, "sunny", "weekend"));
 
 
-
-
-
+  

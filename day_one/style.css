@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.calc-main {
+    background-color: azure;
+    color: black;
+    padding: 10px ;
+    margin: 10px;
+    font-size: 28px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bold;
+}
+
+.calc-demo {
+    background-color: rgb(33, 33, 53);
+    color: whitesmoke;
+    padding: 10px 5px;
+    margin: 10px;
+    font-size: 24px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.calc-demo:hover {
+    background-color: blueviolet;
+}
+
+.arithmetic {
+    color: black;
+    padding: 10px 5px;
+    margin: 10px;
+    font-size: 22px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bold;
+
+  
+    
+
+}
