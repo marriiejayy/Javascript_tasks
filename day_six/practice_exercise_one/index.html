@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Persistent Notes App</title>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>NOTE APP</h1>
+        <div class="timestamp" id="timestamp">No note saved yet</div>
+
+        <textarea id="noteText" placeholder="Enter your note here..."></textarea>
+        <div class="button-group">
+            <button class="save-btn" onclick="saveNote()">Save Note</button>
+            <button class="load-btn" onclick="loadNote()">Load Note</button>
+        </div>
+        <div class="message" id="message"></div>
+    </div>
+
+</body>
+
+</html>
