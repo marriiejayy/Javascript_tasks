@@ -6,7 +6,7 @@
         }
         
         body {
-            background-color: rgb(196, 155, 94);
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
             min-height: 100vh;
             display: flex;
             justify-content: center;
@@ -15,8 +15,9 @@
         }
         
         .container {
-            background-color: beige;
+            background-color: rgba(255, 255, 255, 0.9);
             border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
             width: 100%;
             max-width: 500px;
             padding: 40px;
@@ -30,40 +31,55 @@
         }
         
         .counter-display {
-            background-color: #f8f9fa;
-            color: rgb(70, 71, 138);
+            background: linear-gradient(to right, #6a11cb, #2575fc);
+            color: white;
             padding: 25px;
             border-radius: 15px;
             margin-bottom: 30px;
-           
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         }
         
         .count {
             font-size: 4rem;
             font-weight: bold;
             margin: 10px 0;
-           
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
         }
         
         .message {
-            font-size: 1rem;
+            font-size: 1.2rem;
             margin-bottom: 15px;
         }
         
+        .first-visit {
+            background-color: rgba(255, 255, 255, 0.2);
+            padding: 10px;
+            border-radius: 10px;
+            font-size: 1rem;
+            margin-top: 15px;
+        }
         
         .reset-btn {
             background: linear-gradient(to right, #ff416c, #ff4b2b);
             color: white;
             border: none;
             padding: 15px 30px;
-            font-size: 20px;
-            border-radius: 20px;
+            font-size: 1.1rem;
+            border-radius: 50px;
             cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
             font-weight: bold;
+            letter-spacing: 1px;
         }
         
         .reset-btn:hover {
-            color: blanchedalmond;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        .reset-btn:active {
+            transform: translateY(1px);
         }
         
         .info {
@@ -72,7 +88,7 @@
             background-color: #f8f9fa;
             border-radius: 10px;
             font-size: 0.9rem;
-            color: black;
+            color: #666;
             text-align: left;
         }
         
